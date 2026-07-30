@@ -13,6 +13,16 @@
                 <flux:navbar.item icon="layout-grid" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>
                     {{ __('Dashboard') }}
                 </flux:navbar.item>
+                @can('viewAny', App\Models\Category::class)
+                    <flux:navbar.item icon="tag" :href="route('categories.index')" :current="request()->routeIs('categories.*')" wire:navigate>
+                        {{ __('categories.title') }}
+                    </flux:navbar.item>
+                @endcan
+                @can('viewAny', App\Models\Asset::class)
+                    <flux:navbar.item icon="truck" :href="route('assets.index')" :current="request()->routeIs('assets.*')" wire:navigate>
+                        {{ __('assets.title') }}
+                    </flux:navbar.item>
+                @endcan
             </flux:navbar>
 
             <flux:spacer />
@@ -56,6 +66,16 @@
                     <flux:sidebar.item icon="layout-grid" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>
                         {{ __('Dashboard')  }}
                     </flux:sidebar.item>
+                    @can('viewAny', App\Models\Category::class)
+                        <flux:sidebar.item icon="tag" :href="route('categories.index')" :current="request()->routeIs('categories.*')" wire:navigate>
+                            {{ __('categories.title') }}
+                        </flux:sidebar.item>
+                    @endcan
+                    @can('viewAny', App\Models\Asset::class)
+                        <flux:sidebar.item icon="truck" :href="route('assets.index')" :current="request()->routeIs('assets.*')" wire:navigate>
+                            {{ __('assets.title') }}
+                        </flux:sidebar.item>
+                    @endcan
                 </flux:sidebar.group>
             </flux:sidebar.nav>
 

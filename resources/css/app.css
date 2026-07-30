@@ -23,16 +23,41 @@
     --color-zinc-900: #171717;
     --color-zinc-950: #0a0a0a;
 
-    --color-accent: var(--color-neutral-800);
-    --color-accent-content: var(--color-neutral-800);
-    --color-accent-foreground: var(--color-white);
+    --color-agri-charcoal: #444443;
+    --color-agri-white: #ffffff;
+
+    --color-agri-green-50: #f2faec;
+    --color-agri-green-100: #e1f4d2;
+    --color-agri-green-200: #c3e9a7;
+    --color-agri-green-300: #9bdc73;
+    --color-agri-green-400: #78ca4c;
+    --color-agri-green-500: #69bd3b;
+    --color-agri-green-600: #4f9b2a;
+    --color-agri-green-700: #3f7b23;
+    --color-agri-green-800: #35621f;
+    --color-agri-green-900: #2d511d;
+
+    --color-agri-orange-50: #fff7eb;
+    --color-agri-orange-100: #ffebca;
+    --color-agri-orange-200: #ffd493;
+    --color-agri-orange-300: #ffb857;
+    --color-agri-orange-400: #ff9c25;
+    --color-agri-orange-500: #f68b1f;
+    --color-agri-orange-600: #d96e16;
+    --color-agri-orange-700: #b45214;
+    --color-agri-orange-800: #8f4117;
+    --color-agri-orange-900: #743716;
+
+    --color-accent: var(--color-agri-green-600);
+    --color-accent-content: var(--color-agri-green-600);
+    --color-accent-foreground: var(--color-agri-white);
 }
 
 @layer theme {
     .dark {
-        --color-accent: var(--color-white);
-        --color-accent-content: var(--color-white);
-        --color-accent-foreground: var(--color-neutral-800);
+        --color-accent: var(--color-agri-green-400);
+        --color-accent-content: var(--color-agri-green-400);
+        --color-accent-foreground: var(--color-agri-charcoal);
     }
 }
 

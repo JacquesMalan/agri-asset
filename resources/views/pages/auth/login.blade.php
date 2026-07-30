@@ -18,7 +18,7 @@
                 required
                 autofocus
                 autocomplete="email"
-                placeholder="email@example.com"
+                :placeholder="__('auth.email_placeholder')"
             />
 
             <!-- Password -->
@@ -50,5 +50,21 @@
             </div>
         </form>
 
+        <div class="space-y-3">
+            <div class="relative flex items-center py-1">
+                <div class="grow border-t border-zinc-200 dark:border-zinc-700"></div>
+                <span class="px-3 text-xs text-zinc-500 dark:text-zinc-400">{{ __('auth.or') }}</span>
+                <div class="grow border-t border-zinc-200 dark:border-zinc-700"></div>
+            </div>
+
+            <form method="POST" action="{{ route('demo.login') }}">
+                @csrf
+                <flux:button type="submit" class="w-full" data-test="demo-login-button">
+                    {{ __('auth.continue_as_guest') }}
+                </flux:button>
+            </form>
+
+            <p class="text-center text-xs text-zinc-500 dark:text-zinc-400">{{ __('auth.demo_guest_description') }}</p>
+        </div>
     </div>
 </x-layouts::auth>
